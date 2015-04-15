@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background" 
+    android:paddingBottom="20dp">
+    
+   <include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/header_top_screen" />
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content" 
+       android:gravity="center"
+        android:padding="20dp"
+       android:layout_marginTop="15dp">
+       <TextView
+             android:id="@+id/tv_order_no"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:text="@string/order_no_"
+          
+           android:layout_weight="1"
+           android:gravity="left"
+           android:textAppearance="?android:attr/textAppearanceLarge" />
+
+       <TextView
+           android:id="@+id/tv_order_no_value"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:text="@string/_001"
+           android:layout_weight="1"
+           android:gravity="left"
+           android:paddingLeft="20dp"
+           android:textAppearance="?android:attr/textAppearanceLarge" />
+
+   </LinearLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content" 
+       android:gravity="center"
+       android:padding="20dp"
+       android:background="@color/shadow">
+       <TextView
+           android:id="@+id/tv_raf_no"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:text="@string/raf_no_"
+           android:layout_weight="1"
+          
+           android:gravity="left"
+           android:textAppearance="?android:attr/textAppearanceLarge" />
+
+       <TextView
+           android:id="@+id/tv_raf_no_value"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:text="@string/_232323"
+           android:layout_weight="1"
+           android:gravity="left"
+           android:paddingLeft="20dp"
+           android:textAppearance="?android:attr/textAppearanceLarge" />
+
+   </LinearLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:gravity="center"
+       android:padding="20dp"
+        >
+	
+       <TextView
+           android:id="@+id/tv_username"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:text="@string/user_name"
+           android:layout_weight="1"
+         
+           android:textAppearance="?android:attr/textAppearanceLarge" />
+
+       <TextView
+           android:id="@+id/tv_username_value"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:text="@string/ram_kumar"
+           android:layout_weight="1"
+           android:textAppearance="?android:attr/textAppearanceLarge" />
+
+   </LinearLayout>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:gravity="center"
+        android:padding="20dp"
+        android:background="@color/shadow"
+        >
+	
+       <TextView
+             android:id="@+id/tv_CordinateName"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:text="@string/coordinator_name"
+           android:layout_weight="1"
+         
+           android:textAppearance="?android:attr/textAppearanceLarge" />
+
+       <TextView
+           android:id="@+id/tv_CordinateName_value"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:text="@string/ram_kumar"
+           android:layout_weight="1"
+           android:textAppearance="?android:attr/textAppearanceLarge" />
+
+   </LinearLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content" 
+       android:gravity="center"
+       android:padding="20dp">
+		
+       <TextView
+            android:id="@+id/tv_customer_address"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:text="@string/customer_address"
+           android:layout_weight="1"
+          
+           android:textAppearance="?android:attr/textAppearanceLarge" />
+
+       <TextView
+           android:id="@+id/tv_customer_address_value"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:text="@string/_157_karol_bagh_new_delhi"
+           android:layout_weight="1"
+           android:textAppearance="?android:attr/textAppearanceLarge" />
+
+   </LinearLayout>
+
+     <LinearLayout 
+       android:layout_height="0dp"
+       android:layout_width="match_parent"
+       android:layout_weight="1"
+       android:layout_marginLeft="20dp"
+      android:orientation="vertical"
+	    android:layout_marginRight="20dp">
+       </LinearLayout>
+   
+   <LinearLayout 
+       android:layout_height="wrap_content"
+       android:layout_width="match_parent"
+  
+       android:layout_marginLeft="20dp"
+      android:orientation="vertical"
+	    android:layout_marginRight="20dp">
+	<TextView 
+	    android:id="@+id/tv_complete_thisorder"
+	    android:layout_height="wrap_content"
+	    android:layout_width="match_parent"
+	    android:text="@string/complete_this_order"
+	     android:padding="20dp"
+	    android:textColor="@color/white"
+	    android:background="@color/red"
+	   
+	  
+	    android:gravity="center"
+	    android:layout_marginTop="20dp"
+	     android:textAppearance="?android:attr/textAppearanceLarge"
+	     />
+	<TextView 
+	    android:id="@+id/tv_search_for_documants"
+	    android:layout_height="wrap_content"
+	    android:layout_width="match_parent"
+	    android:text="@string/search_for_documents"
+	     android:padding="20dp"
+	    android:textColor="@color/white"
+	    android:background="@color/red"
+	   
+	  
+	    android:gravity="center"
+	    android:layout_marginTop="20dp"
+	     android:textAppearance="?android:attr/textAppearanceLarge"
+	     />
+	<TextView 
+	     android:id="@+id/tv_order_cant"
+	    android:layout_height="wrap_content"
+	    android:layout_width="match_parent"
+	    android:text="Order can,t be Completed"
+	     android:padding="20dp"
+	    android:textColor="@color/white"
+	    android:background="@color/red"
+	   
+	    
+	    android:gravity="center"
+	    android:layout_marginTop="20dp"
+	     android:textAppearance="?android:attr/textAppearanceLarge"
+	     />
+	    </LinearLayout>
+</LinearLayout>

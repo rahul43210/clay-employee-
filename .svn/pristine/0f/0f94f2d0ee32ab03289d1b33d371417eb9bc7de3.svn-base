@@ -1,0 +1,52 @@
+package com.mandeep.employeetracking.activity;
+
+import com.mandeep.employeetracking.R;
+import com.mandeep.employeetracking.constants.CommonUtils;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+	
+public class PreviewSignatureActivity extends Activity implements OnClickListener{
+	private TextView tvHeader;
+	private ImageView ivLogout,iv_signature_preview;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_preview_signature);
+		getId();
+		tvHeader.setText("Preview Signature");
+		ivLogout.setVisibility(View.VISIBLE);
+		
+		setListener();
+	}
+
+	private void setListener() {
+		ivLogout.setOnClickListener(this);
+		iv_signature_preview.setOnClickListener(this);
+	}
+
+	private void getId() {
+		tvHeader = (TextView)findViewById(R.id.tvHeader);
+		ivLogout = (ImageView)findViewById(R.id.ivLogout);
+		iv_signature_preview = (ImageView)findViewById(R.id.iv_signature_preview);
+	}
+
+	@Override
+	public void onClick(View v) {
+		switch(v.getId()){
+		
+		case R.id.ivLogout:
+			CommonUtils.AlertLogout(this);
+			break;
+		case R.id.iv_signature_preview:
+			
+			break;
+		}
+		
+	}
+}

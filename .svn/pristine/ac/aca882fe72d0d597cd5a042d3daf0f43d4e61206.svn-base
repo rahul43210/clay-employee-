@@ -1,0 +1,332 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header_top_screen" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="25dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:paddingTop="25dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:id="@+id/ud_passcopy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/checkbox_selector"
+                android:drawablePadding="5dp"
+                android:padding="10dp"
+                android:text="@string/ud_passcopy"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <CheckBox
+                android:id="@+id/ud_visa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/checkbox_selector"
+                android:drawablePadding="5dp"
+                android:padding="10dp"
+                android:text="@string/ud_visa"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_linearimage"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/abc_search_dropdown_dark" >
+
+            <ImageView
+                android:id="@+id/iv_card"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <!--
+             <ImageView
+            android:id="@+id/iv_card"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_weight="0.5"
+            android:src="@drawable/abc_search_dropdown_dark" />
+        -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <!--
+                 <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/ud_editorpreview"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+                -->
+
+                <TextView
+                    android:id="@+id/tv_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ud_edit"
+                    android:clickable="true"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ud_or"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <TextView
+                    android:id="@+id/tv_preview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:text="@string/ud_preview"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/ud_paym"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/red" />
+
+            <!--
+                 <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:
+                android:layout_weight="1" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <RadioButton
+                        android:id="@+id/rb_ud_chequee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/rb_ud_letterheada"
+                        android:layout_centerVertical="true"
+                        android:checked="false"
+                        android:paddingLeft="10dp"
+                        android:text="@string/ud_cheque"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    <RadioButton
+                        android:id="@+id/rb_ud_cash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/rb_ud_chequee"
+                        android:layout_alignBottom="@+id/rb_ud_chequee"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="29dp"
+                        android:checked="false"
+                        android:paddingLeft="10dp"
+                        android:text="@string/ud_cash"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    <RadioButton
+                        android:id="@+id/rb_ud_letterheada"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="139dp"
+                        android:layout_marginTop="39dp"
+                        android:checked="false"
+                        android:paddingLeft="10dp"
+                        android:text="@string/ud_letterhead"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    <RadioButton
+                        android:id="@+id/rb_ud_creditcarda"
+                        style="@drawable/radio_selector"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/rb_ud_letterheada"
+                        android:layout_alignBottom="@+id/rb_ud_letterheada"
+                        android:layout_alignLeft="@+id/rb_ud_cash"
+                        android:checked="false"
+                        android:paddingLeft="10dp"
+                        android:text="@string/ud_creditcard"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                </RelativeLayout>
+
+            </RadioGroup>
+            -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:id="@+id/iv_creditcard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/radio_icon_sel" />
+
+                    <TextView
+                        android:id="@+id/tv_crefitcard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="@string/ud_creditcard"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:id="@+id/iv_letterhead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/radio_icon" />
+
+                    <TextView
+                        android:id="@+id/tv_letterhead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="@string/ud_letterhead"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:id="@+id/iv_cash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/radio_icon" />
+
+                    <TextView
+                        android:id="@+id/tv_cash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="@string/ud_cash"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:id="@+id/iv_cheque"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/radio_icon" />
+
+                    <TextView
+                        android:id="@+id/tv_cheque"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="@string/ud_cheque"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_creditcard_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/ud_card_hint"
+                android:maxLines="1"
+                android:inputType="number"
+                android:padding="15dp"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/red"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/ud_next"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

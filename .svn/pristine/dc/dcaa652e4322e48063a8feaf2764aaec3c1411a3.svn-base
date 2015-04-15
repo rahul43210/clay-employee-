@@ -1,0 +1,65 @@
+package com.mandeep.employeetracking.activity;
+
+
+
+import com.mandeep.employeetracking.R;
+import com.mandeep.employeetracking.constants.CommonUtils;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
+
+public class OrderIncompleteActivity extends Activity implements OnClickListener {
+	
+	private TextView tvHeader,tv_Submit;
+	private ImageView ivLogout;
+	private EditText et_AnyOtherReason;
+	RadioGroup rg_ReasoSelect;
+	RadioButton rb_IncompleteDocuments,rb_CustomerNotAvailable;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_order_incomplete_screen);
+		getId();
+		tvHeader.setText("Order Incomplete");
+		
+		
+	}
+
+	private void getId() {
+		tvHeader=(TextView) findViewById(R.id.tvHeader);
+		ivLogout=(ImageView) findViewById(R.id.ivLogout);
+		tv_Submit=(TextView) findViewById(R.id.tv_Submit);
+		et_AnyOtherReason=(EditText) findViewById(R.id.et_AnyOtherReason);
+		rg_ReasoSelect=(RadioGroup) findViewById(R.id.rg_ReasoSelect);
+		rb_CustomerNotAvailable=(RadioButton) findViewById(R.id.rb_CustomerNotAvailable);
+		rb_IncompleteDocuments=(RadioButton) findViewById(R.id.rb_IncompleteDocuments);
+		tv_Submit.setOnClickListener(this);
+		ivLogout.setOnClickListener(this);
+	}
+
+	@Override
+	public void onClick(View v) {
+	switch (v.getId()) {
+	case R.id.tv_Submit:
+		startActivity(new Intent(this,OrderDetailActivity.class));
+		break;
+	case R.id.ivLogout:
+		CommonUtils.AlertLogout(this);
+		break;
+	default:
+		break;
+	}
+		
+	}
+
+}

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/FrameLayout1"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_height="match_parent" >
+    
+     <FrameLayout 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content">
+          <ImageView
+                android:id="@+id/iv_prof_pic_zoom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"                
+                android:layout_margin="15dp"  
+                android:src="@drawable/abc_ab_solid_dark_holo"
+                />
+          
+           <ImageView
+                android:id="@+id/iv_cross"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|top"
+                android:src="@drawable/cross" />
+          
+         
+     </FrameLayout>
+     
+     </LinearLayout>
+<!--        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+
+            <ImageView
+                android:id="@+id/iv_cross"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="80dp"
+                android:layout_marginTop="150dp"
+                android:src="@drawable/cross" />
+
+            <ImageView
+                android:id="@+id/iv_prof_pic_zoom"
+                android:layout_width="400dp"
+                android:layout_height="400dp"
+                android:layout_below="@+id/iv_cross"
+                android:layout_margin="15dp"
+                android:layout_toLeftOf="@+id/iv_cross"
+                android:background="#BDBDBD" />
+
+        </RelativeLayout>
+ -->
+
+
+<!-- 
+       <FrameLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:background="@android:color/transparent"
+            android:layout_height="match_parent" >
+
+        </RelativeLayout>
+
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    
+    
+    <ImageView
+        android:id="@+id/iv_cross"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        
+        android:src="@drawable/cross" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <ImageView
+            android:id="@+id/iv_prof_pic_zoom"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="15dp"
+            android:layout_marginRight="28dp"
+            android:background="#BDBDBD" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+</FrameLayout> -->

@@ -1,0 +1,351 @@
+package com.mandeep.employeetracking.constants;
+
+
+
+import com.mandeep.employeetracking.R;
+import com.mandeep.employeetracking.activity.LoginScreenActivity;
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+import android.net.Uri;
+import android.preference.PreferenceManager;
+import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.view.View.MeasureSpec;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup.LayoutParams;
+import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.CheckBox;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class CommonUtils{
+	public static void showAlert(String message,final View v, Activity context) {
+
+		if(v != null){
+			v.setEnabled(false);
+		}
+		AlertDialog.Builder builder = new AlertDialog.Builder(context);
+		builder.setMessage(message)
+		.setCancelable(false)
+		.setPositiveButton(R.string.ok,
+				new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog, int id) {
+				dialog.dismiss();
+                  
+				if(v != null){
+					v.setEnabled(true);
+				}
+			}
+		});
+
+		try {
+			builder.show();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public static void showAlertTitle(String title, String message,
+			final Context context) {
+
+		AlertDialog.Builder builder = new AlertDialog.Builder(context);
+		
+		builder.setMessage(message).setCancelable(false).setTitle(title)
+				.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+					@Override
+					public void onClick(DialogInterface dialog, int id) {
+						dialog.dismiss();
+					}
+				});
+
+		try {
+			builder.show();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+	public static void showAlert(String message, Activity context) {
+		AlertDialog.Builder builder = new AlertDialog.Builder(context);
+		builder.setMessage(message)
+		.setCancelable(false)
+		.setPositiveButton(R.string.ok,
+				new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog, int id) {
+				dialog.dismiss();
+              
+			}
+		});
+
+		try {
+			builder.show();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public static void ProgressDialog(String tittle,String message, Activity context) {
+		AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
+
+		// set title
+		alertDialogBuilder.setTitle(tittle);
+
+		// set dialog message
+		alertDialogBuilder.setMessage(message).setCancelable(false);
+
+		// create alert dialog
+		AlertDialog alertDialog = alertDialogBuilder.create();
+
+		// show it
+		alertDialog.show();
+
+		// After some action
+		alertDialog.dismiss();
+	}
+	
+	public final static boolean isValidEmail(CharSequence target) {
+		if (target == null) {  
+			return false;
+		} else {
+			
+			return android.util.Patterns.EMAIL_ADDRESS.matcher(target)
+					.matches();
+		}
+	}
+	
+	public final static boolean isValidPhone(CharSequence target) {
+		if (target == null) {
+			return false;
+		} else {
+			
+			return android.util.Patterns.PHONE.matcher(target)
+					.matches() && (target.length()>=10 && target.length()<=20);
+		}
+	}
+	
+	 
+	
+	public static void hideSoftKeyboard(Activity activity) {
+	    InputMethodManager inputMethodManager = (InputMethodManager)  activity.getSystemService(Context.INPUT_METHOD_SERVICE);
+	    inputMethodManager.hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(), 0);
+	}
+	
+	public static void SendEmail(Activity context, String To) {
+		 Intent emailIntent = new Intent(Intent.ACTION_SEND);
+	      emailIntent.setData(Uri.parse("mailto:"));
+	      emailIntent.setType("text/plain");
+	      emailIntent.putExtra(Intent.EXTRA_EMAIL,To);
+	      emailIntent.putExtra(Intent.EXTRA_SUBJECT, "");
+	      emailIntent.putExtra(Intent.EXTRA_TEXT, "");
+	      try {
+		         context.startActivity(Intent.createChooser(emailIntent, "Send mail..."));
+		         Log.i("Finished sending email...", "");
+		      } catch (android.content.ActivityNotFoundException ex) {
+		         Toast.makeText(context, 
+		         "There is no email client installed.", Toast.LENGTH_SHORT).show();
+		      }
+		 }
+	 public static String getTimeStamp() {
+
+			long timestamp = (System.currentTimeMillis() / 1000L);
+			String tsTemp = "" + timestamp;
+
+			return "" + tsTemp;
+
+		}
+	 /**** Method for Setting the Height of the ListView dynamically.
+	  **** Hack to fix the issue of not showing all the items of the ListView
+	  **** when placed inside a ScrollView  ****/
+	 public static void setListViewHeightBasedOnChildren(ListView listView) {
+	     ListAdapter adapter = listView.getAdapter();
+		// PackageInformationAdapter adapter = new PackageInformationAdapter(context, arr_list);
+	     if (adapter == null)
+	         return;
+
+	     int desiredWidth = MeasureSpec.makeMeasureSpec(listView.getWidth(), MeasureSpec.UNSPECIFIED);
+	     int totalHeight = 0;
+	     View view = null;
+	     for (int i = 0; i < adapter.getCount(); i++) {
+	         view = adapter.getView(i, view, listView);
+	         if (i == 0)
+	             view.setLayoutParams(new ViewGroup.LayoutParams(desiredWidth, android.view.ViewGroup.LayoutParams.WRAP_CONTENT));
+
+	         view.measure(desiredWidth, MeasureSpec.UNSPECIFIED);
+	         totalHeight += view.getMeasuredHeight();
+	     }
+	     ViewGroup.LayoutParams params = listView.getLayoutParams();
+	     params.height = totalHeight + (listView.getDividerHeight() * (adapter.getCount() - 1));
+	     listView.setLayoutParams(params);
+	     listView.requestLayout();
+	 }
+	 public static void AlertLogout(final Activity context) {
+		 	
+		 	final TextView tv_yes,tv_no;
+			LayoutInflater inflater = LayoutInflater.from(context);
+			final Dialog mDialog = new Dialog(context,
+					android.R.style.Theme_Translucent_NoTitleBar);
+			mDialog.setCanceledOnTouchOutside(true);
+			mDialog.getWindow().setLayout(LayoutParams.MATCH_PARENT,
+					LayoutParams.WRAP_CONTENT);
+			mDialog.getWindow().setGravity(Gravity.CENTER);
+			//mDialog.getWindow().getAttributes().windowAnimations = R.anim.slide_up;
+			WindowManager.LayoutParams lp = mDialog.getWindow().getAttributes();
+			lp.dimAmount = 0.75f;
+			mDialog.getWindow()
+					.addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
+			mDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+			mDialog.getWindow();
+			View dialoglayout = inflater.inflate(R.layout.dialog_logout, null);
+			mDialog.setContentView(dialoglayout);
+			mDialog.show();
+			tv_yes = (TextView)dialoglayout.findViewById(R.id.tv_yes);
+			tv_no = (TextView)dialoglayout.findViewById(R.id.tv_no);
+			tv_yes.setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					
+	/*				Intent intent = new Intent(context,LoginScreenActivity.class);
+					//intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				//	intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+					intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//					context.moveTaskToBack(true);
+				
+					
+					context.startActivity(intent);
+//					context.finish();
+					*/
+					
+					 Intent intent = new Intent(context, LoginScreenActivity.class);
+					    intent.putExtra("finish", true); // if you are checking for this in your other Activities
+					    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | 
+					                    Intent.FLAG_ACTIVITY_CLEAR_TASK |
+					                    Intent.FLAG_ACTIVITY_NEW_TASK);
+					    context.startActivity(intent);
+					    context.finish();
+					mDialog.dismiss();
+				}
+			});
+			tv_no.setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					
+					
+					mDialog.dismiss();
+				}
+			});
+			mDialog.show();
+			}
+	 public static void ShowalertTitleCustomize(String message, Activity context) {
+		 	
+		 	final TextView tv_yes,tv_no,tv_message,tv_message_second;
+			LayoutInflater inflater = LayoutInflater.from(context);
+			final Dialog mDialog = new Dialog(context,
+					android.R.style.Theme_Translucent_NoTitleBar);
+			mDialog.setCanceledOnTouchOutside(true);
+			mDialog.getWindow().setLayout(LayoutParams.MATCH_PARENT,
+					LayoutParams.WRAP_CONTENT);
+			mDialog.getWindow().setGravity(Gravity.CENTER);
+			//mDialog.getWindow().getAttributes().windowAnimations = R.anim.slide_up;
+			WindowManager.LayoutParams lp = mDialog.getWindow().getAttributes();
+			lp.dimAmount = 0.75f;
+			mDialog.getWindow()
+					.addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
+			mDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+			mDialog.getWindow();
+			View dialoglayout = inflater.inflate(R.layout.dialog_logout, null);
+			mDialog.setContentView(dialoglayout);
+			mDialog.show();
+			tv_yes = (TextView)dialoglayout.findViewById(R.id.tv_yes);
+			tv_no = (TextView)dialoglayout.findViewById(R.id.tv_no);
+			tv_message = (TextView)dialoglayout.findViewById(R.id.tv_message);
+			tv_message.setText(message);
+			tv_message.setGravity(Gravity.CENTER_HORIZONTAL);
+			tv_message_second = (TextView)dialoglayout.findViewById(R.id.tv_message_second);
+			tv_message_second.setVisibility(View.GONE);
+			tv_no.setVisibility(View.GONE);
+			tv_yes.setText("Ok");
+			tv_yes.setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					
+					
+					mDialog.dismiss();
+				}
+			});
+			tv_no.setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					
+					
+					mDialog.dismiss();
+				}
+			});
+			mDialog.show();
+			}
+	
+	 public static void savePreferencesString(Context context, String key,
+				String value) {
+
+			SharedPreferences sharedPreferences = PreferenceManager
+					.getDefaultSharedPreferences(context);
+			Editor editor = sharedPreferences.edit();
+			editor.putString(key, value);
+			editor.commit();
+
+		}
+
+		public static void savePreferencesBoolean(Context context, String key,
+				boolean value) {
+
+			SharedPreferences sharedPreferences = PreferenceManager
+					.getDefaultSharedPreferences(context);
+			Editor editor = sharedPreferences.edit();
+			editor.putBoolean(key, value);
+			editor.commit();
+
+		}
+
+		public static void savePreferencesInt(Context context, String key, int value) {
+
+			SharedPreferences sharedPreferences = PreferenceManager
+					.getDefaultSharedPreferences(context);
+			Editor editor = sharedPreferences.edit();
+			editor.putInt(key, value);
+			editor.commit();
+
+		}
+
+		public static String getPreferencesString(Context context, String key) {
+
+			SharedPreferences sharedPreferences = PreferenceManager
+					.getDefaultSharedPreferences(context);
+			return sharedPreferences.getString(key, "");
+
+		}
+
+		public static int getPreferencesInt(Context context, String key) {
+
+			SharedPreferences sharedPreferences = PreferenceManager
+					.getDefaultSharedPreferences(context);
+			return sharedPreferences.getInt(key, 0);
+
+		}
+}

@@ -1,0 +1,79 @@
+package com.mandeep.employeetracking.activity;
+
+import java.util.ArrayList;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.mandeep.employeetracking.R;
+import com.mandeep.employeetracking.adapters.CheckListAdapter;
+import com.mandeep.employeetracking.adapters.OrderDetailPullBackAdapter;
+import com.mandeep.employeetracking.constants.CommonUtils;
+import com.mandeep.employeetracking.model.CheckListPojo;
+import com.mandeep.employeetracking.model.OrderDetailsPullBackPojo;
+
+public class OrderDetailPullBackActivity extends Activity implements OnClickListener{
+	
+	private String[] fields = {"RAF No","H/S Model","H/S EmEi No.","Mobile No.","Return Time"
+			,"Return Place","Return Date","Total No. of Rental Days","Recieved in Stock by"};
+	private String[] fiels_value = {"#157, Karol Bagh, New Delhi","Nokia","1212121323125","8585949830",
+			"09:00 AM","Janakpuri","11/02/2015","5","Suresh Kumar"};
+	
+	private OrderDetailsPullBackPojo pojo_orderdetail;
+	private ListView lv_order_detail;
+	private ArrayList<OrderDetailsPullBackPojo> arr_list;
+	private TextView tvHeader,tv_next;
+	private OrderDetailPullBackAdapter adapter;
+	private ImageView ivLogout;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_order_detail_pullback);
+		getId();
+		ivLogout.setVisibility(View.VISIBLE);
+		tvHeader.setText(R.string.order_detail_pullback);
+		arr_list = new ArrayList<OrderDetailsPullBackPojo>();
+		for(int i =0; i<fields.length;i++){
+			pojo_orderdetail = new OrderDetailsPullBackPojo(fields[i],fiels_value[i]);
+			arr_list.add(pojo_orderdetail);
+		}
+		adapter = new OrderDetailPullBackAdapter(this,arr_list);
+		lv_order_detail.setAdapter(adapter);
+		setListener();
+	}
+
+	private void setListener() {
+		ivLogout.setOnClickListener(this);
+		tv_next.setOnClickListener(this);
+	}
+
+	private void getId() {
+		ivLogout = (ImageView)findViewById(R.id.ivLogout);
+		lv_order_detail = (ListView)findViewById(R.id.lv_order_detail);
+		tvHeader = (TextView)findViewById(R.id.tvHeader);
+		tv_next=(TextView)findViewById(R.id.tv_next);
+		
+	}
+
+	@Override
+	public void onClick(View v) {
+		switch(v.getId()){
+		
+		case R.id.ivLogout:
+			CommonUtils.AlertLogout(this);
+			break;
+			
+		case R.id.tv_next:
+			startActivity(new Intent(this, OrderPullBackCheckListActivity.class));
+			break;
+		}
+		
+	}
+}

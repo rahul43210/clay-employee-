@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/ll_linearlogin"
+    android:background="@drawable/background" >
+
+    <!-- header -->
+
+   <include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/header_top_screen" />
+ 
+    <!-- Body -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:paddingBottom="15dp"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/text"
+            android:textColorHint="@color/text" 
+            >
+
+        </EditText>
+
+        <TextView
+            android:id="@+id/tv_empty_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:textColor="@color/red"
+            android:text="@string/_you_forgot_to_enter_your_email_address_"
+            android:textAppearance="?android:attr/textAppearanceMedium" 
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/tv_wrong_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:textColor="@color/red"
+            android:text="@string/_you_have_enter_the_wrong_email_address_"
+            android:textAppearance="?android:attr/textAppearanceMedium" 
+            android:visibility="gone"
+            />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:paddingBottom="15dp"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/text"
+            android:textColorHint="@color/text" />
+        	<TextView
+            android:id="@+id/tv_empty_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:textColor="@color/red"
+            android:text="@string/_you_forgot_to_enter_your_password"
+             android:textAppearance="?android:attr/textAppearanceMedium" 
+            android:visibility="gone"
+            />
+        	<TextView
+            android:id="@+id/tv_wrong_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:textColor="@color/red"
+            android:text="@string/_you_have_enter_the_wrong_password"
+            android:textAppearance="?android:attr/textAppearanceMedium" 
+            android:visibility="gone"
+            />
+
+        <CheckBox
+            android:id="@+id/cbRememberMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginBottom="25dp"
+            android:layout_marginTop="25dp"
+            android:drawableLeft="@drawable/checkbox_selector"
+            android:text="@string/remember_me"
+            android:textColor="@color/red"
+            android:drawablePadding="5dp"
+            android:background="@null"
+            android:button="@null"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/red"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="@string/login"
+            android:textColor="#FFFFFF"
+            android:textAppearance="?android:attr/textAppearanceLarge"  />
+    </LinearLayout>
+
+</LinearLayout>

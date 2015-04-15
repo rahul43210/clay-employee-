@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">EmployeeTracking</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="_you_forgot_to_enter_your_email_address_">* You forgot to enter your email address.</string>
+    <string name="_you_have_enter_the_wrong_email_address_">* You have enter the wrong email address.</string>
+    <string name="_you_forgot_to_enter_your_password">* You forgot to enter your password.</string>
+    <string name="_you_have_enter_the_wrong_password">* You have enter the wrong password.</string>
+    <string name="ok">Ok</string>
+    <string name="raf_no">RAF No</string>
+    <string name="raf_label">257489</string>
+    <string name="package_enrollment_form">Package Enrollment Form</string>
+    <string name="package_summary">Package summary</string>
+    <string name="item">Item</string>
+    <string name="sim_card">Sim_card</string>
+    <string name="package_">Package</string>
+    <string name="is103">IS103</string>
+    <string name="rental_charges">Rental Charges</string>
+    <string name="_1_00">1.00</string>
+    <string name="service_charges_">Service charges(%)</string>
+    <string name="service_charge_value">0.00</string>
+    <string name="damage_charges_">"Damage Charges"</string>
+    <string name="currency">Currency</string>
+    <string name="usd">USD</string>
+    <string name="min_comm_">Min.comm.</string>
+    <string name="package_details">Package Details</string>
+    <string name="call_type">Call Type</string>
+    <string name="unit_price">Unit Price</string>
+    <string name="min_price">Min Price</string>
+    <string name="off_peak_price">Off-Peak Price</string>
+    <string name="unit">Unit</string>
+    <string name="min_unit">Min. Unit</string>
+    <string name="coupon_details">Coupon Details</string>
+    <string name="coupon">Coupon</string>
+    <string name="coupon_type">Coupon Type</string>
+    <string name="discount_type">Discount Type</string>
+    <string name="discount_no_">Discount No.</string>
+    <string name="discount">Discount</string>
+    <string name="frequency">Frequency</string>
+    <string name="i_agree_to">I agree to</string>
+    <string name="terms_conditions"><u>terms &amp; Conditions</u></string>
+    <string name="title_activity_upload_signature">UploadSignatureActivity</string>
+    <string name="preview">Preview</string>
+    <string name="or">OR</string>
+    <string name="confirm">Confirm</string>
+    <string name="alert">Alert</string>
+    <string name="this_order_has_been">This order has been</string>
+    <string name="successfully_completed_">Successfully completed.</string>
+    <string name="send_sms_to_customer"><u>Send SMS to Customer</u></string>
+    <string name="search">Search</string>
+    <string name="enter_passport_number">Enter Passport Number</string>
+    <string name="title_activity_raf">RAFActivity</string>
+    <string name="raf">RAF</string>
+    <string name="raf_information">RAF Information</string>
+    <string name="raf_no_">RAF NO.</string>
+    <string name="raf_date_">RAF Date:</string>
+    <string name="_15_oct_2014">15-Oct-2014</string>
+    <string name="a_c_manager">A/C Manager</string>
+    <string name="a_c_manager_name_"> Enter A/C Manager Name.</string>
+    <string name="franchisse_no_">Franchisse No.:</string>
+    <string name="customer_agreement_form">Customer Agreement Form</string>
+    <string name="enter_raf_no_">Enter RAF No.</string>
+    <string name="enter_raf_date_eg_15_oct_2014_">Enter RAF Date. (eg: 15-oct-2014) </string>
+    <string name="enter_franchisse_no_">Enter Franchisse No .</string>
+    <string name="this_agreement_is_between_falcon_business_resources_pvt_ltd_hereinafter_referred_as_falcon_customer_whose_details_are_noted_as_below_">This agreement is between Falcon Business Resources Pvt. Ltd. hereinafter referred as Falcon &amp; Customer whose details are noted as below:\n</string>
+    <string name="customer_name">Customer Name</string>
+    <string name="enter_customer_name">Enter Customer Name</string>
+    <string name="co_ordinate_details">Co-ordinate Details</string>
+    <string name="name">Name</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="contact_no">Contact No</string>
+    <string name="enter_contact_no">Enter Contact No</string>
+    <string name="enter_email_">"Enter Email "</string>
+    <string name="delivery_address">Delivery Address</string>
+    <string name="enter_delivery_address">Enter Delivery Address</string>
+    <string name="billing_address">Billing Address</string>
+    <string name="enter_billing_address">Enter Billing address</string>
+    <string name="user_details">User Details</string>
+    <string name="dob">DOB</string>
+    <string name="enter_dob_eg_dd_mm_yyyy_">Enter DOB (eg :dd/mm/yyyy)</string>
+    <string name="passport_no">Passport No</string>
+    <string name="enter_passport_no">Enter Passport No</string>
+    <string name="nationality">Nationality</string>
+
+    <string-array name="natainalitylist">
+        <item>Lebanon</item>
+        <item>UAE</item>
+        <item>India</item>
+        <item>Germany</item>
+    </string-array>
+    <string-array name="paymentMode">
+        <item>Cash</item>
+        <item>Check</item>
+        <item>Credit Card</item>
+        <item>Debit Card</item>
+    </string-array>
+
+    <string name="payment_mode">Payment Mode</string>
+    <string name="_257489">257489</string>
+    <string name="rahul_juyal">Rahul juyal</string>
+    <string name="_8143300077">8143300077</string>
+    <string name="lumax_industries">Lumax industries</string>
+    <string name="nk_bajaj">NK Bajaj</string>
+    <string name="_9818747100">9818747100</string>
+    <string name="bajaj_lumaxmail_com">bajaj@lumaxmail.com</string>
+    <string name="plot_no_16_sector_18_maruti_complex_gurugaon_gurugaon_haryana_india">Plot No 16 sector 18 Maruti complex ,Gurugaon,Gurugaon,haryana,India</string>
+    <string name="vineet_sahni">Vineet Sahni</string>
+    <string name="_9810044651">9810044651</string>
+    <string name="_26_11_1988">26/11/1988</string>
+    <string name="customer_declaration">Customer Declaration</string>
+    <string name="dummycontact_declartion">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, </string>
+    <string name="product_package_details">Product &amp; Package Details</string>
+    <string name="mobile_no">Mobile No</string>
+    <string name="handset">Handset</string>
+    <string name="data_card">Data Card</string>
+    <string name="wi_fi">Wi-fi</string>
+    <string name="travelling_date">Travelling Date</string>
+    <string name="travelling_country">Travelling Country</string>
+    <string name="delivery_location">Delivery Location</string>
+    <string name="sim_no">SIM No</string>
+    <string name="imei_no">IMEI No</string>
+    <string name="delivery_date">Delivery Date</string>
+    <string name="_package">Package</string>
+    <string name="exp_return_date">Exp. Return Date</string>
+    <string name="delivery_time">Delivery Time</string>
+    <string name="value_added_services_vas_requested_y_n_">Value Added Services (Vas) Requested (Y/N)</string>
+    <string name="gprs">GPRS</string>
+    <string name="y">Y</string>
+    <string name="int_romaning">int. Romaning</string>
+    <string name="n">N</string>
+    <string name="voice_mail">Voice Mail</string>
+    <string name="black_berry">Black Berry</string>
+    <string name="data_services">Data Services</string>
+    <string name="other_charges_applied">Other Charges Applied</string>
+    <string name="charge_name">Charge Name</string>
+    <string name="amount">Amount</string>
+    <string name="for_detailed_tarrif_plan_clay_pack_please_consult_attached_tarrif_sheet">For Detailed Tarrif Plan/Clay Pack Please Consult Attached Tarrif Sheet</string>
+    <string name="customer_undertaking">Customer Undertaking</string>
+    <string name="return_loss_of_products">Return/ Loss of Products</string>
+    <string name="note_">Note:</string>
+    <!-- After integration Manuaaly -->
+
+    <string name="index">1</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="send_by_email"><u>Send by Email</u></string>
+    <string name="upload_all_as_pdf">Upload all as PDF</string>
+    <string name="customer_address">Customer Address</string>
+    <string name="ram_kumar">Ram Kumar</string>
+    <string name="next_">Next>></string>
+    <string name="are_you_sure_you">Are you sure you</string>
+    <string name="want_to_logout_">want to logout ?</string>
+    <string name="i_hereby_being_the_customer_authorize">"I hereby being the customer authorize Falcon to charge/ Block any amount(s) for bills generated or unbilled amounts &amp; related expenses on account of telecom\nusage to my above mentioned card(s). These expenses are to be charged to my nominated credit card (s) at the sole discretion of Falcon. This instruction is valid\non an ongoing basis. I agree to advise Falcon if my nominated credit card account is cancelled, substituted or not renewed. In such case, I agree to provide\nalternative payment instructions as specified by Falcon.\nThe customer is requested to return the equipment at the same place from where it is taken, falling which, Falcon will charge additional rental.\n                        "</string>
+    <string name="_prices_as_per_the_tariff_plan_">(*) Prices as per the Tariff Plan/Clay Pack selected will be debited from your credit card as per above declaration. The call charges along with the service charges\nand taxes will also be debited to your account on receipt of itemized bill of calls made / received.The above rates are for the destination country only. Roaming rates\nwill be extra. Toll Free Numbers other than Clay Toll Free Number are Chargeable. All disputes are subject to the jurisdiction of Delhi / New Delhi courts only.\n</string>
+    <string name="the_above_goods_have_been_received_by_me_in_excellent_working_condition_">"The above goods have been received by me in excellent working condition and I agree to return the same to Falcon in excellent working condition. I authorize\nFalcon to prepare my usage bill as per above rates and charge my credit card account as per details given above. If the amount due is not settled within one week\nof the presentation of the bill, I understand that I will be charged on the outstanding amount an interest @ 2% per month. I hereby undertake not to misuse the\nmobile phone / SIM card taken from Falcon for any illegal / unauthorized purposes and indemnify Falcon for any legal consequences whatsoever.\n\nThis customer agreement form consists of 3 pages and I confirm that I have read the terms and conditions mentioned in both the pages and I agree to abide with\nthem\n                        "</string>
+    <string name="kindly_call_on_our_24_x_7_customer_care_no_91_11_66470000_for_any_return_loss_of_products_information_">"Kindly call on our 24 X 7 Customer Care no. +91.11.66470000 for any Return / Loss of Products information.\n                        "</string>
+    <string name="a_all_inventory_handset_s_sim_card_s_data_cards_s_given_to_customers_under_the_">"a) All inventory (Handset(s), SIM card(s), data cards(s) given to customers under the agreement must be returned with in 48 hours of expiry of contracted time. In\ncase of any delay customer would be subjected to a charge of INR 100/ day till its returned to Falcon’s Office. Falcon would not be laible for any misuse while the\nabove inventory is in customers possession.\nb) All inventory if not returned to Falcon after expiry of 48 hrs from the contracted period shall be suspended &amp; suspension charges of INR 1000/- will have to be\nborne by the client.\nc) Calls/ SMS subscribtion to premium services can only be activated or deactivated by the user. The charges to the services do not form the part of normal\ncontracted rates &amp; will be subjected to premium rates levied by the operator with varied costs.\n                        "</string>
+    <string name="enter_the_valid_passport_no_">Enter the valid Passport No.</string>
+    <string name="l_ogin">Login</string>
+    <string name="title_activity_order_detail">OrderDetailActivity</string>
+    <string name="order_no_">Order No.</string>
+    <string name="_001">001</string>
+    <string name="user_name">User Name</string>
+    <string name="coordinator_name">Coordinator Name</string>
+    <string name="complete_this_order">Complete This Order</string>
+    <string name="search_for_documents">Search for Documents</string>
+    <string name="_232323">232323</string>
+    <string name="_157_karol_bagh_new_delhi">#157, Karol Bagh, New Delhi</string>
+    <string name="order_detail_pullback">Order Detail - Pullback</string>
+    <string name="order_detail">Order Detail</string>
+
+</resources>

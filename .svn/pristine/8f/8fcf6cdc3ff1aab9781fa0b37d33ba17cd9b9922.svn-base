@@ -1,0 +1,92 @@
+package com.mandeep.employeetracking.activity;
+
+import com.mandeep.employeetracking.R;
+import com.mandeep.employeetracking.constants.CommonUtils;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.View.OnTouchListener;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+public class SearchScreenActivity extends Activity implements OnClickListener{
+	
+	private TextView tvHeader,tv_search;
+	private EditText et_passport_num;
+	private ImageView ivLogout;
+	private FrameLayout flSearchScreen;
+	
+	private Intent intent;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_search_screen);
+		getId();
+		tvHeader.setText(R.string.search);
+		ivLogout.setVisibility(View.VISIBLE);
+		
+		setListener();
+	}
+	private void getId() {
+		
+		ivLogout =(ImageView)findViewById(R.id.ivLogout);
+		tvHeader = (TextView)findViewById(R.id.tvHeader);
+		tv_search = (TextView)findViewById(R.id.tv_search);
+		et_passport_num = (EditText)findViewById(R.id.et_passport_num);
+		flSearchScreen=(FrameLayout)findViewById(R.id.fl_searchscreen);
+		
+		flSearchScreen.setOnTouchListener(new OnTouchListener() {
+			
+			@Override
+			public boolean onTouch(View v, MotionEvent event) {
+				// TODO Auto-generated method stub
+				InputMethodManager imm = (InputMethodManager)SearchScreenActivity.this.getSystemService(SearchScreenActivity.this.INPUT_METHOD_SERVICE);
+				imm.hideSoftInputFromWindow(et_passport_num.getWindowToken(), 0);
+				
+				return false;
+			}
+		});
+		
+	}
+	private void setListener() {
+		tv_search.setOnClickListener(this);
+		ivLogout.setOnClickListener(this);
+	}
+	@Override
+	public void onClick(View v) {
+		switch(v.getId()){
+		
+		case R.id.tv_search:
+			if(checkIsEmpty())
+			{
+			intent=new Intent(SearchScreenActivity.this,SearchResultsActivity.class);
+			startActivity(intent);
+			}
+			break;
+			
+		case R.id.ivLogout:
+			CommonUtils.AlertLogout(this);
+			break;
+		}
+		
+	}
+	private boolean checkIsEmpty() {
+		// TODO Auto-generated method stub
+		if(et_passport_num.getText().toString().trim().isEmpty())
+		{
+			CommonUtils.ShowalertTitleCustomize( getString(R.string.enter_the_valid_passport_no_), this);
+			return false;
+		}
+		else
+		return true;
+	}
+
+}

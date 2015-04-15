@@ -1,0 +1,56 @@
+package com.mandeep.employeetracking.activity;
+
+import com.mandeep.employeetracking.R;
+import com.mandeep.employeetracking.constants.CommonUtils;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+public class SearchScreenActivity extends Activity implements OnClickListener{
+	
+	private TextView tvHeader,tv_search;
+	private EditText et_passport_num;
+	private ImageView ivLogout;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_preview_signature);
+		getId();
+		tvHeader.setText("Preview Signature");
+		ivLogout.setVisibility(View.VISIBLE);
+		
+		setListener();
+	}
+	private void getId() {
+		
+		ivLogout =(ImageView)findViewById(R.id.ivLogout);
+		tvHeader = (TextView)findViewById(R.id.tvHeader);
+		tv_search = (TextView)findViewById(R.id.tv_search);
+		et_passport_num = (EditText)findViewById(R.id.et_passport_num);
+		
+	}
+	private void setListener() {
+		tv_search.setOnClickListener(this);
+		ivLogout.setOnClickListener(this);
+	}
+	@Override
+	public void onClick(View v) {
+		switch(v.getId()){
+		
+		case R.id.tv_search:
+			
+			break;
+			
+		case R.id.ivLogout:
+			CommonUtils.AlertLogout(this);
+			break;
+		}
+		
+	}
+
+}

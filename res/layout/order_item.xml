@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+    
+    <LinearLayout 
+        android:id="@+id/ll_order_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        >
+     
+        <TextView 
+            android:id="@+id/tv_RAF_NO"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="RAF No"
+            android:clickable="true"
+            android:layout_gravity="center_vertical"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="15sp"
+            android:layout_marginTop="18dp"
+            android:gravity="center_horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"/>
+       
+        
+        <TextView 
+            android:id="@+id/tv_OrderType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Order Type"
+            android:clickable="true"
+            android:textSize="15sp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:gravity="center_horizontal"
+            android:padding="5dp"/>
+
+       
+        
+        <TextView 
+            android:id="@+id/tv_SimType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sim Type"
+            android:gravity="center_horizontal"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="15sp"
+            android:padding="5dp"/>
+        
+        <TextView 
+            android:id="@+id/tv_Location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Location"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="15sp"
+            android:gravity="center_horizontal"
+            android:padding="5dp"/>
+        
+        <TextView 
+            android:id="@+id/tv_Time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Time"
+            android:textSize="15sp"
+            android:gravity="center_horizontal"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:padding="5dp"/>
+        
+    </LinearLayout>
+</LinearLayout>
